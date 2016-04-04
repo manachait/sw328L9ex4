@@ -6,7 +6,6 @@ var prevY = 170;
 var offset = 0.4;
 var watchID = null;
 
-$(init);
 function init(){
     document.addEventListener("deviceready", onDeviceReady, false);
 }
@@ -15,7 +14,7 @@ function onDeviceReady(){
 }
 function startAccelerometer(){
     mycanvas = document.getElementById("mycanvas");
-    context = canvas.getContext("2d");
+    context = mycanvas.getContext("2d");
     bubble = document.getElementById("bubble");
     
     bubble.onload = function(){
