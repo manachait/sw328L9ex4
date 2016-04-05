@@ -25,7 +25,7 @@ function moveBubble(acc){
     var x = acc.x * 100;
     var y = acc.y * 100;
     var newX = x + prevX;
-    var newY = y + prevY;
+    var newY = (-1 * y) + prevY;
     drawImage(newX, newY);
     prevX = newX;
     prevY = newY;
