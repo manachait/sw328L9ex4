@@ -22,10 +22,13 @@ function startAccelerometer(){
     bubble.src = "img/bubble.png";
 }
 function moveBubble(acc){
-    var x = acc.x * 100;
-    var y = acc.y * 100;
-    var newX = x + prevX;
-    var newY = (-1 * y) + prevY;
+    compX = -0.428;
+    compY = 1.243;
+    var x = (acc.x + compX) * 100;
+    var y = (acc.y + compY) * 100;
+    var newX = x * offset + (1 - offset) * prevX;
+    var newY = y * offset + (1 - offset) * prevY;
+	
     drawImage(newX, newY);
     prevX = newX;
     prevY = newY;
